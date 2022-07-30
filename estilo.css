@@ -1,51 +1,69 @@
-* {
-    margin:0;
-    padding:0;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-.game-board {
-    width: 80%;
+  }
+  
+  body{
+    background-color: #0c0c0c;
+  }
+  
+  .game-board {
+    width: 100%;
     height: 500px;
-    border: 1px solid #333;
+    border-bottom: 1px solid #333;
+    margin: 0 auto;
     position: relative;
-}
-.pipe{
+    overflow: hidden;
+  }
+  
+  .background-mario{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .pipe{
     position: absolute;
     bottom:0;
     width: 70px;
-  /*  animation: pipe-animation 2s infinite linear; */
-}
-@keyframes pipe-animation {
-    from {
-        right: -80px;
-    }
-    to {
-        right: 100%;
-    }
-}
-.mario {
+    animation: pipe-animation 2s infinite linear;
+  
+  }
+  .mario{
     width: 150px;
     position: absolute;
-    bottom: 0;
-    
-}
-.jump {
+    bottom: 0px;
+  }
+  
+  .jump{
     animation: jump 500ms ease-out;
-}
-@keyframes jump {
-    0% {
-        bottom: 0;
+  }
+  
+  @keyframes pipe-animation {
+    from{ 
+      right: -80px;
     }
-    40% {
-        bottom: 180px;
+    to{
+      right:100%;
+    }
+  }
+  
+  @keyframes jump {
+    0% {
+      bottom: 0;
+    }
+  
+    40%{
+      bottom: 180px;
     }
     50% {
-        bottom: 180px;
+      bottom: 180px;
     }
     60% {
-        bottom: 180px;
+      bottom: 180px;
     }
     100% {
-        bottom: 0;
+      bottom: 0;
     }
-}
+  }
+  
